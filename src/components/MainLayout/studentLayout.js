@@ -29,19 +29,20 @@ class MainLayout extends React.Component {
 				        className = {styles.nav}
 				    >
         				<Menu.Item key="1">首页</Menu.Item>
-        				<Menu.Item key="2">学习中心</Menu.Item>
+        				<Menu.Item key="2">课程中心</Menu.Item>
                 		<SubMenu title={<span>实训中心</span>}>
-                    		<Menu.Item>互评</Menu.Item>
-                  			<Menu.Item>实训内容</Menu.Item>
+                    		<Menu.Item>结果展示</Menu.Item>
+                  			<Menu.Item>互评</Menu.Item>
                 		</SubMenu>                  
-        				<Menu.Item key="4">讨论区</Menu.Item>
+        				<Menu.Item key="4">问题讨论</Menu.Item>
         				<Menu.Item key="5">我的团队</Menu.Item>
-						<SubMenu title={<span>实训成果</span>}>
-                    		<Menu.Item>实训总结</Menu.Item>
-                  			<Menu.Item>实训成绩</Menu.Item>
+						<SubMenu title={<span>课程成果</span>}>
+                    		<Menu.Item>课程总结</Menu.Item>
+                  			<Menu.Item>课程成绩</Menu.Item>
                 		</SubMenu>         				
         				<SubMenu title={<span>工具</span>}>
-                    		<Menu.Item>抢答器</Menu.Item>
+                    		<Menu.Item>截屏</Menu.Item>
+                            <Menu.Item>记笔记</Menu.Item>
                 		</SubMenu>  
 						<SubMenu title={<span><Avatar className={styles.user} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /></span>}>
 				            <Menu.Item><Icon type="user" />个人中心</Menu.Item>
@@ -58,7 +59,7 @@ class MainLayout extends React.Component {
       				</div>
     			</Content>
     			<Footer style={{ textAlign: 'center' }}>
-      				新道科技股份有限公司
+      				在线课堂
     			</Footer>
   			</Layout>
     	);

@@ -73,21 +73,21 @@ class MainLayout extends React.Component {
         				onOpenChange = {this.onOpenChange}
         				onSelect = {this.onSelect}
 		          	>
-		            	<Menu.Item key="1"><span>数据看板</span></Menu.Item>
-		            	<Menu.Item key="2"><span>公告</span></Menu.Item>
+		            	<Menu.Item key="1"><span>大数据管理</span></Menu.Item>
+		            	<Menu.Item key="2"><span>通知</span></Menu.Item>
 	          			<SubMenu key="3" title={<span>课前准备</span>}>
           					<Menu.Item key="3.1">学生管理</Menu.Item>
-          					<Menu.Item key="3.2">备课大纲</Menu.Item>
+          					<Menu.Item key="3.2">进行备课</Menu.Item>
           					<Menu.Item key="3.3">排课管理</Menu.Item>
         				</SubMenu>
 		            	<Menu.Item key="4"><span>教学管理</span></Menu.Item>	            	
 						<Menu.Item key="5"><span>实训中心</span></Menu.Item>
-		            	<Menu.Item key="6"><span>讨论区</span></Menu.Item>	            	
+		            	<Menu.Item key="6"><span>答疑区</span></Menu.Item>	            	
 						<Menu.Item key="7"><span>团队管理</span></Menu.Item>
 						<SubMenu key="8" title={<span>教学成果</span>}>
           					<Menu.Item key="8.1">成绩管理</Menu.Item>
-          					<Menu.Item key="8.2">财务企划书</Menu.Item>
-          					<Menu.Item key="8.3">实习报告</Menu.Item>
+          					<Menu.Item key="8.2">查看作业</Menu.Item>
+          					<Menu.Item key="8.3">结课论文</Menu.Item>
           					<Menu.Item key="8.4">实训总结</Menu.Item>
         				</SubMenu>
 		            	<Menu.Item key="9"><span>工具</span></Menu.Item>	            	
@@ -118,7 +118,7 @@ class MainLayout extends React.Component {
 		          	</Content>
 		        
 		      		<Footer style={{ textAlign: 'center' }}>
-		        		新道科技股份有限公司
+		        		在线课堂
 		      		</Footer>
 		    	</Layout>
 	  		</Layout>

@@ -1,23 +1,30 @@
 {
   "entry": "src/index.js",
-  "extraBabelPlugins": [
-    "transform-runtime",
-    "transform-decorators-legacy",
-    "transform-class-properties",
-    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]
-  ],
+  "theme": "./src/theme.js",
   "env": {
     "development": {
       "extraBabelPlugins": [
-        "dva-hmr"
+        "dva-hmr",
+        "transform-runtime",
+        ["import", { "libraryName": "antd", "style": "css" }]
+      ]
+    },
+    "production": {
+      "extraBabelPlugins": [
+        "transform-runtime"
       ]
     }
   },
-  "externals": {
-    "g2": "G2",
-    "g-cloud": "Cloud",
-    "g2-plugin-slider": "G2.Plugin.slider"
-  },
-  "ignoreMomentLocale": true,
-  "theme": "./src/theme.js"
+  "proxy": {
+    "/api": {
+      "target": "http://jsonplaceholder.typicode.com/",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api" : "" }
+    },
+    "/stest": {
+      "target": "http://47.93.23.65:8080/stest",
+      "changeOrigin": true,
+      "pathRewrite": { "^/stest" : "" }
+    }    
+  }
 }

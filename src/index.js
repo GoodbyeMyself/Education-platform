@@ -1,21 +1,17 @@
 import dva from 'dva';
-import 'moment/locale/zh-cn';
-import './polyfill';
-import './g2';
-import './raven';
-// import browserHistory from 'history/createBrowserHistory';
-import './index.less';
+import './index.css';
+import { browserHistory } from 'dva/router';
 
 // 1. Initialize
 const app = dva({
-  // history: browserHistory(),
+    history:browserHistory,
 });
 
 // 2. Plugins
 // app.use({});
 
-// 3. Register global model
-app.model(require('./models/global'));
+// 3. Model
+// app.model(require('./models/User'));
 
 // 4. Router
 app.router(require('./router'));

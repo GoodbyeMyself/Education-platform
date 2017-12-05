@@ -1,0 +1,30 @@
+{
+  "entry": "src/index.js",
+  "theme": "./src/theme.js",
+  "env": {
+    "development": {
+      "extraBabelPlugins": [
+        "dva-hmr",
+        "transform-runtime",
+        ["import", { "libraryName": "antd", "style": "css" }]
+      ]
+    },
+    "production": {
+      "extraBabelPlugins": [
+        "transform-runtime"
+      ]
+    }
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://jsonplaceholder.typicode.com/",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api" : "" }
+    },
+    "/stest": {
+      "target": "http://47.93.23.65:8080/stest",
+      "changeOrigin": true,
+      "pathRewrite": { "^/stest" : "" }
+    }    
+  }
+}

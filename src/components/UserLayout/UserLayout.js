@@ -40,7 +40,6 @@ class UserLayout extends React.PureComponent {
   render() {
 
     return (
-      	
         	<div className={styles.container}>
           		<div className={styles.top}>
             		<div className={styles.header}>
@@ -54,7 +53,6 @@ class UserLayout extends React.PureComponent {
          		{this.props.children}
           	<GlobalFooter className={styles.footer} links={links} copyright={copyright} />
         </div>
-      	
     );
   }
 }

@@ -1,66 +1,55 @@
 import React from 'react';
-import { Router, Route } from 'dva/router';
+import { Router, Switch, Route } from 'dva/router';
+import dynamic from 'dva/dynamic';
 import Login from './routes/User/Login';
 import Register from './routes/User/Register';
 import stuIndexPage from './routes/Student/IndexPage';
 import tchIndexPage from './routes/Teacher/IndexPage';
 
-
-const cached = {};
-
-function registerModel(app, model) {
-  	if (!cached[model.namespace]) {
-    	app.model(model);
-    	cached[model.namespace] = 1;
-  	}
-}
-
 function RouterConfig({ history, app }) {
-    const routes = [
-        
-        {
-          path: '/',
-          name: 'Login',
-          getComponent (nextState, cb) {
-            require.ensure([], require => {
-                registerModel(app, require('./models/User/Login'));
-                cb(null, require('./routes/User/Login'))
-            })
-          }
-        },  
-        {
-          path: '/Register',
-          name: 'Register',
-          getComponent (nextState, cb) {
-            require.ensure([], require => {
-                registerModel(app, require('./models/User/Register'));
-                cb(null, require('./routes/User/Register'))
-            })
-          }
-        },  
-        {
-          path: '/stuIndexPage',
-          name: 'stuIndexPage',
-          getComponent (nextState, cb) {
-            require.ensure([], require => {
-               registerModel(app, require('./models/Student/IndexPage'));
-               cb(null, require('./routes/Student/IndexPage'))
-            })
-          }
-        },                      
-        {
-          path: '/tchIndexPage',
-          name: 'tchIndexPage',
-          getComponent (nextState, cb) {
-            require.ensure([], require => {
-              	registerModel(app, require('./models/Teacher/IndexPage'));
-              	cb(null, require('./routes/Teacher/IndexPage'))
-            })
-          }
-        }                  
-    ];
-    return <Router history={history} routes={routes} />;
-}
+  	
+  	const Login = dynamic({
+    	app,
+    	models: () => [
+      		import('./models/User/Login'),
+    	],
+    	component: () => import('./routes/User/Login'),
+  	});
 
+	const Register = dynamic({
+    	app,
+    	models: () => [
+      		import('./models/User/Register'),
+    	],
+    	component: () => import('./routes/User/Register'),
+  	});  	
+
+	const stuIndexPage = dynamic({
+    	app,
+    	models: () => [
+      		import('./models/Student/IndexPage'),
+    	],
+    	component: () => import('./routes/Student/IndexPage'),
+  	});
+
+	const tchIndexPage = dynamic({
+    	app,
+    	models: () => [
+      		import('./models/Teacher/IndexPage'),
+    	],
+    	component: () => import('./routes/Teacher/IndexPage'),
+  	});
+
+  	return (
+    	<Router history = { history }>
+      		<Switch>
+        		<Route exact path="/" component={ Login } />
+        		<Route exact path="/Register" component={ Register } />
+        		<Route exact path="/stuIndexPage" component={ stuIndexPage } />
+        		<Route exact path="/tchIndexPage" component={ tchIndexPage } />
+      		</Switch>
+    	</Router>
+  	);
+}
 
 export default RouterConfig;

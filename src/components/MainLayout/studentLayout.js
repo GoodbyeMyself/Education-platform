@@ -48,7 +48,9 @@ class MainLayout extends React.Component {
 				            <Menu.Item><Icon type="user" />个人中心</Menu.Item>
         					<Menu.Item><Link to="/tchIndexPage"><Icon type="setting" />切换到教师</Link></Menu.Item>
         					<Menu.Divider />
-        					<Menu.Item key="logout"><Icon type="logout" />退出登录</Menu.Item>
+        					<Menu.Item key="logout">
+        						<Link to="/tchIndexPage"><Icon type="logout" />退出登录</Link>
+        					</Menu.Item>
 				        </SubMenu>        				
       				</Menu>
 					  				

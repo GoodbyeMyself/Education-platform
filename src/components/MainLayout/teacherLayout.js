@@ -107,9 +107,11 @@ class MainLayout extends React.Component {
 					    >
 			            	<SubMenu title={<Avatar className={styles.user} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}>
 					            <Menu.Item><Icon type="user" />个人中心</Menu.Item>
-	        					<Menu.Item><Link to="/"><Icon type="setting" />切换到学生</Link></Menu.Item>
+	        					<Menu.Item><Link to="/stuIndexPage"><Icon type="setting" />切换到学生</Link></Menu.Item>
 	        					<Menu.Divider />
-	        					<Menu.Item key="logout"><Icon type="logout" />退出登录</Menu.Item>
+	        					<Menu.Item key="logout">
+	        						<Link to="/"><Icon type="logout" />退出登录</Link>
+	        					</Menu.Item>
 					        </SubMenu>
 					    </Menu>    
 		          	</Header>

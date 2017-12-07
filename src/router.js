@@ -1,10 +1,6 @@
 import React from 'react';
 import { Router, Switch, Route } from 'dva/router';
 import dynamic from 'dva/dynamic';
-import Login from './routes/User/Login';
-import Register from './routes/User/Register';
-import stuIndexPage from './routes/Student/IndexPage';
-import tchIndexPage from './routes/Teacher/IndexPage';
 
 function RouterConfig({ history, app }) {
   	

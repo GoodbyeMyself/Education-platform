@@ -8,7 +8,7 @@ import styles from './Login.less';
 const FormItem = Form.Item;
 const { TabPane } = Tabs;
 
-function Login({dispatch, Login, location, form:{setFieldsValue, getFieldDecorator, validateFields, getFieldValue}}){
+function Login({dispatch, Login, location, form: { setFieldsValue, getFieldDecorator, validateFields, getFieldValue }}){
 
 	const  {  count, type } = Login;
 
@@ -45,23 +45,41 @@ function Login({dispatch, Login, location, form:{setFieldsValue, getFieldDecorat
 
   	const handleSubmit = (e) => {
     	e.preventDefault();
-    	validateFields((err, values) => {
+
+    	console.log( type );
+    	
+    	validateFields({ force: true },(err, values) => {
             if(!err){
-            	console.log('可以登录');
+            	console.log(values);
             }
         });
-  	}    
+  	}  
+
+  	const renderMessage = (message) => {
+	    return (
+	      	<Alert
+	        	style={{ marginBottom: 24 }}
+	        	message={message}
+	        	type="error"
+	        	showIcon
+	      	/>
+	    );
+  	}  
+
+  	console.log(Login);
 
     return (
             <div className={styles.main}>
         		<Form onSubmit={handleSubmit}>
-          			<Tabs animated={false} className={styles.tabs} activeKey={type} onChange={onSwitch}>
+          			<Tabs 
+          				animated = { false } 
+          				className = { styles.tabs } 
+          				activeKey = { type } 
+          				onChange = { onSwitch }
+          			>
             			<TabPane tab="账户密码登录" key="account">
 			              	{
-			                	login.status === 'error' &&
-			                	login.type === 'account' &&
-			                	login.submitting === false &&
-			                	this.renderMessage('账户或密码错误')
+			                	login.status === 'error' && login.type === 'account' && login.submitting === false && this.renderMessage('账户或密码错误')
 			              	}
               				<FormItem>
                 				{getFieldDecorator('userName', {
@@ -130,10 +148,10 @@ function Login({dispatch, Login, location, form:{setFieldsValue, getFieldDecorat
 	                  			</Col>
 	                  			<Col span={8}>
 				                    <Button
-				                      	disabled={count}
-				                      	className={styles.getCaptcha}
-				                      	size="large"
-				                      	onClick={onGetCaptcha}
+				                      	disabled = {count}
+				                      	className = {styles.getCaptcha}
+				                      	size = "large"
+				                      	onClick = {onGetCaptcha}
 				                    >
 		                      			{count ? `${count} s` : '获取验证码'}
 		                    		</Button>

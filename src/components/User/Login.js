@@ -10,7 +10,7 @@ const { TabPane } = Tabs;
 
 function Login({dispatch, Login, location, form: { setFieldsValue, getFieldDecorator, validateFields, getFieldValue }}){
 
-	const  {  count, type } = Login;
+	const  {  count, type, submitting, status } = Login;
 
   	const onSwitch = (key) => {
 		dispatch({
@@ -45,9 +45,6 @@ function Login({dispatch, Login, location, form: { setFieldsValue, getFieldDecor
 
   	const handleSubmit = (e) => {
     	e.preventDefault();
-
-    	console.log( type );
-    	
     	validateFields({ force: true },(err, values) => {
             if(!err){
             	console.log(values);
@@ -58,15 +55,13 @@ function Login({dispatch, Login, location, form: { setFieldsValue, getFieldDecor
   	const renderMessage = (message) => {
 	    return (
 	      	<Alert
-	        	style={{ marginBottom: 24 }}
-	        	message={message}
-	        	type="error"
+	        	style = {{ marginBottom: 24 }}
+	        	message = {message}
+	        	type = "error"
 	        	showIcon
 	      	/>
 	    );
   	}  
-
-  	console.log(Login);
 
     return (
             <div className={styles.main}>
@@ -79,7 +74,7 @@ function Login({dispatch, Login, location, form: { setFieldsValue, getFieldDecor
           			>
             			<TabPane tab="账户密码登录" key="account">
 			              	{
-			                	login.status === 'error' && login.type === 'account' && login.submitting === false && this.renderMessage('账户或密码错误')
+			                	status && renderMessage('账户或密码错误')
 			              	}
               				<FormItem>
                 				{getFieldDecorator('userName', {
@@ -168,7 +163,7 @@ function Login({dispatch, Login, location, form: { setFieldsValue, getFieldDecor
               			<Checkbox className={styles.autoLogin}>自动登录</Checkbox>
             		)}
             		<a className={styles.forgot} href="">忘记密码</a>
-            		<Button size="large" loading={login.submitting} className={styles.submit} type="primary" htmlType="submit">
+            		<Button size="large" loading = { submitting } className={styles.submit} type="primary" htmlType="submit">
               			登录
             		</Button>
           		</FormItem>
@@ -176,10 +171,10 @@ function Login({dispatch, Login, location, form: { setFieldsValue, getFieldDecor
         	<div className={styles.other}>
           		其他登录方式
           		{/* 需要加到 Icon 中 */}
-          		<span className={styles.iconAlipay} />
-          		<span className={styles.iconTaobao} />
-          		<span className={styles.iconWeibo} />
-          		<Link className={styles.register} to="/Register">注册账户</Link>
+          		<span className = {styles.iconAlipay} />
+          		<span className = {styles.iconTaobao} />
+          		<span className = {styles.iconWeibo} />
+          		<Link className = {styles.register} to="/Register">注册账户</Link>
         	</div>
       	</div>
     );

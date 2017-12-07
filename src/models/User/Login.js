@@ -6,7 +6,9 @@ export default {
   
   	state: {
 		count: 0,
-    	type: 'account',    	
+    	type: 'account', 
+        submitting : false,
+        status : false   	
   	},
 
   	subscriptions: {

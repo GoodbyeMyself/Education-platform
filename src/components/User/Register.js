@@ -25,11 +25,6 @@ const passwordProgressMap = {
 
 function Register({dispatch, Login, location, form:{setFieldsValue, getFieldDecorator, validateFields, getFieldValue}}){
 
-
-    
-
-   
-
     return (
         <div>
            

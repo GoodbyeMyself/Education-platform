@@ -2,6 +2,7 @@ import fetch from 'dva/fetch';
 import config from './config';
 import constant from './constant';
 import { message } from 'antd';
+import appContext from './common.js';
 
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {

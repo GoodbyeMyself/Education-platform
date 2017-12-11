@@ -13,6 +13,65 @@ let instance = null;
 
 class AppContext {
 
+    constructor() {
+
+        if(!instance){
+            instance = this;
+            instance.map = {};
+            fp.get(function(result, components) {
+                instance.setItemInCookieHashed('deviceId', result, { path: '/' });
+            });
+
+            if (window.location.hostname === '10.10.16.217' || window.location.hostname === 'localhost') {
+                //TODO: 部署时移除
+                instance.setMockUserInfo();
+            }
+        }
+        return instance;
+
+    }
+
+
+    /**
+     * 写入模拟用户信息，
+     * TODO: 生产/测试环境删除，仅用于联调
+     */
+    setMockUserInfo() {
+        this.setItemInCookieHashed('userId', '');
+        this.setItemInCookieHashed('userName', '');
+        this.setItemInCookieHashed('userType', '');
+        this.setItemInCookieHashed('userToken', '');
+        console.error('仅用于联调，生产/测试环境移除此调用');
+    }
+
+    /**
+     * 登出
+     */
+    logout() {
+        if (window && window.localStorage) {
+            this.removeItemInCookieHashed('userId');
+            this.removeItemInCookieHashed('userToken');
+            this.removeItemInCookieHashed('userType');
+            this.removeItemInCookieHashed('userName');
+        }
+    }
+
+    /**
+     * 从cookie中获取当前登录的用户的账户信息, 用于接口调用
+     * @return {[type]} [description]
+     */
+    getCurrentAccountInfo() {
+
+        const accountInfo = {
+            userName: this.getItemInCookie('userName'),
+            userId: this.getItemInCookie('userId'),
+            userType: this.getItemInCookie('userType'),
+            imgLink: decodeURI(this.getItemInCookie('imgLink')),
+            userToken: ''
+        }
+        return accountInfo;
+    }    
+
     /**
      * 在localStorage中设置永久数据，浏览器关闭不会清空
      * @param {string} key   [description]
@@ -67,7 +126,6 @@ class AppContext {
         if (window && window.sessionStorage) {
             return new Buffer(window.sessionStorage.getItem(md5(key)), 'base64').toString();
         }
-
         return null;
     }
 
@@ -174,7 +232,7 @@ class AppContext {
      * 传入  第一个参数开始数组， 第二个参数改变的数组
      * @descipition 判断数组两边是否相等（校验顺序、多维单维数组 和数组包含的json、校验具体字段类型不同）
      */
-    export function arrayIsEqualFn(beforeArray, afterArray) {
+    arrayIsEqualFn(beforeArray, afterArray) {
         const compare = (() => {
             function compareArray(a, b) {
                 if (a.length !== b.length) {

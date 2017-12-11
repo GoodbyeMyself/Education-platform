@@ -16,7 +16,7 @@ import styles from './UserLayout.less';
   		href: '',
 	}];
 
-	const copyright = <div>Copyright <Icon type="copyright" /> 2017 蚂蚁金服体验技术部出品</div>;
+	const copyright = <div>Copyright <Icon type="copyright" /> 15500409521@163.com</div>;
 
 class UserLayout extends React.PureComponent {
   	static childContextTypes = {

@@ -133,7 +133,7 @@ class MainLayout extends React.Component {
 		          	</Content>
 		        
 		      		<Footer style={{ textAlign: 'center' }}>
-		        		在线课堂
+		        		15500409521@163.com
 		      		</Footer>
 		    	</Layout>
 	  		</Layout>

@@ -21,7 +21,7 @@ export default ({ className, links, copyright }) => {
           </div>
         )
       }
-      <div className={styles.copyright}>底部</div>
+      <div className={styles.copyright}>15500409521@163.com</div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import LoginComponent from '../../components/User/Login.js';
-import UserLayout from '../../components/UserLayout/UserLayout';
+import UserLayout from '../../components/MainLayout/UserLayout';
 
 function Login({ location }) {
   return (

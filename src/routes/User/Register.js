@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import RegisterComponent from '../../components/User/Register.js';
-import UserLayout from '../../components/UserLayout/UserLayout';
+import UserLayout from '../../components/MainLayout/UserLayout';
 
 function Register({ location }) {
   return (

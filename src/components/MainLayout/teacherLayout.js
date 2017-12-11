@@ -73,24 +73,38 @@ class MainLayout extends React.Component {
         				onOpenChange = {this.onOpenChange}
         				onSelect = {this.onSelect}
 		          	>
-		            	<Menu.Item key="1"><span>大数据管理</span></Menu.Item>
-		            	<Menu.Item key="2"><span>通知</span></Menu.Item>
-	          			<SubMenu key="3" title={<span>课前准备</span>}>
+		            	<Menu.Item key="1"><Icon type="area-chart" /><span>大数据管理</span></Menu.Item>
+		            	<Menu.Item key="2"><Icon type="message" /><span>班级公告</span></Menu.Item>
+	          			<SubMenu key="3" 
+	          				title={
+	          						<span>
+	          							<Icon type="switcher" />
+	          							<span>课前准备</span>
+	          						</span>
+	          					} 
+	          			>
           					<Menu.Item key="3.1">学生管理</Menu.Item>
           					<Menu.Item key="3.2">进行备课</Menu.Item>
           					<Menu.Item key="3.3">排课管理</Menu.Item>
         				</SubMenu>
-		            	<Menu.Item key="4"><span>教学管理</span></Menu.Item>	            	
-						<Menu.Item key="5"><span>实训中心</span></Menu.Item>
-		            	<Menu.Item key="6"><span>答疑区</span></Menu.Item>	            	
-						<Menu.Item key="7"><span>团队管理</span></Menu.Item>
-						<SubMenu key="8" title={<span>教学成果</span>}>
-          					<Menu.Item key="8.1">成绩管理</Menu.Item>
-          					<Menu.Item key="8.2">查看作业</Menu.Item>
+		            	<Menu.Item key="4"><Icon type="user" /><span>教学管理</span></Menu.Item>	            	
+						<Menu.Item key="5"><Icon type="ant-design" /><span>实训中心</span></Menu.Item>
+		            	<Menu.Item key="6"><Icon type="question" /><span>答疑区</span></Menu.Item>	            	
+						<Menu.Item key="7"><Icon type="team" /><span>团队管理</span></Menu.Item>
+						<SubMenu key="8" 
+							title={
+									<span>
+	          							<Icon type="trophy" />								
+										<span>教学成果</span>
+									</span>
+								}
+						>
+          					<Menu.Item key="8.1">查看作业</Menu.Item>
+          					<Menu.Item key="8.2">成绩管理</Menu.Item>
           					<Menu.Item key="8.3">结课论文</Menu.Item>
           					<Menu.Item key="8.4">实训总结</Menu.Item>
         				</SubMenu>
-		            	<Menu.Item key="9"><span>工具</span></Menu.Item>	            	
+		            	<Menu.Item key="9"><Icon type="tool" /><span>工具</span></Menu.Item>	            	
 		          	</Menu>
 	        	</Sider>
 		    	<Layout>
@@ -107,7 +121,6 @@ class MainLayout extends React.Component {
 					    >
 			            	<SubMenu title={<Avatar className={styles.user} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}>
 					            <Menu.Item><Icon type="user" />个人中心</Menu.Item>
-	        					<Menu.Item><Link to="/stuIndexPage"><Icon type="setting" />切换到学生</Link></Menu.Item>
 	        					<Menu.Divider />
 	        					<Menu.Item key="logout">
 	        						<Link to="/"><Icon type="logout" />退出登录</Link>

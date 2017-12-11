@@ -30,14 +30,14 @@ class MainLayout extends React.Component {
 				    >
         				<Menu.Item key="1">首页</Menu.Item>
         				<Menu.Item key="2">课程中心</Menu.Item>
-                		<SubMenu title={<span>实训中心</span>}>
-                    		<Menu.Item>结果展示</Menu.Item>
-                  			<Menu.Item>互评</Menu.Item>
+                		<SubMenu title={<span>任务副本</span>}>
+                    		<Menu.Item>选择关卡</Menu.Item>
+                  			<Menu.Item>辅助</Menu.Item>
                 		</SubMenu>                  
         				<Menu.Item key="4">问题讨论</Menu.Item>
         				<Menu.Item key="5">我的团队</Menu.Item>
 						<SubMenu title={<span>课程成果</span>}>
-                    		<Menu.Item>课程总结</Menu.Item>
+                    		<Menu.Item>提交作业</Menu.Item>
                   			<Menu.Item>课程成绩</Menu.Item>
                 		</SubMenu>         				
         				<SubMenu title={<span>工具</span>}>
@@ -46,10 +46,9 @@ class MainLayout extends React.Component {
                 		</SubMenu>  
 						<SubMenu title={<span><Avatar className={styles.user} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /></span>}>
 				            <Menu.Item><Icon type="user" />个人中心</Menu.Item>
-        					<Menu.Item><Link to="/tchIndexPage"><Icon type="setting" />切换到教师</Link></Menu.Item>
         					<Menu.Divider />
         					<Menu.Item key="logout">
-        						<Link to="/tchIndexPage"><Icon type="logout" />退出登录</Link>
+        						<Link to="/"><Icon type="logout" />退出登录</Link>
         					</Menu.Item>
 				        </SubMenu>        				
       				</Menu>

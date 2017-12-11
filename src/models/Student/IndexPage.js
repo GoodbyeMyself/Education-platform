@@ -13,7 +13,7 @@ export default {
 	subscriptions: {
 		setup({dispatch, history}) {
 			return history.listen(({ pathname, query }) => {
-                if (pathname === '/') {
+                if (pathname === '/stuIndexPage') {
                     dispatch({
                         type: 'getData',
                         payload: {

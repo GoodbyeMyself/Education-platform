@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
 import { routerRedux, Link } from 'dva/router';
-import { Form, Input, Tabs, Button, Icon, Checkbox, Row, Col, Alert } from 'antd';
+import { Form, Input, Tabs, Button, Icon, Checkbox, Row, Col, Alert,  message } from 'antd';
 import styles from './Login.less';
 
 
@@ -45,9 +45,57 @@ function Login({dispatch, Login, location, form: { setFieldsValue, getFieldDecor
 
   	const handleSubmit = (e) => {
     	e.preventDefault();
+
+    	if(status){
+			dispatch({
+	            type: 'Login/updateState',
+	            payload: {
+	               status: false,
+	            }
+	        })     		
+    	}
+		   	
     	validateFields({ force: true },(err, values) => {
             if(!err){
-            	console.log(values);
+				dispatch({
+		            type: 'Login/updateState',
+		            payload: {
+		               submitting: true,
+		            }
+		        }) 
+
+		        setTimeout(() => {
+  					if(values.userName == 'student'){
+  						message.success('登陆成功！',2, function(){
+							dispatch({
+					            type: 'Login/updateState',
+					            payload: {
+					               submitting: false,
+					            }
+					        })   							
+  							dispatch(routerRedux.push('/stuIndexPage'));
+  						})
+		        	} 
+		        	else if(values.userName == 'teacher'){
+						dispatch({
+				            type: 'Login/updateState',
+				            payload: {
+				               submitting: false,
+				            }
+				        })   							
+						dispatch(routerRedux.push('/tchIndexPage'));		        		
+		        	}
+		        	else{
+						dispatch({
+				            type: 'Login/updateState',
+				            payload: {
+				               submitting: false,
+				               status : true 
+				            }
+				        }) 		        		
+		        	}
+				}, 2000); 
+
             }
         });
   	}  

@@ -1,3 +1,5 @@
+@import "~antd/lib/style/themes/default.less";
+
 .logo {
    	width: 120px;
     height: 32px;
@@ -21,8 +23,17 @@
 }
 .user{
     margin-top: 10px;
+    :global(.ant-dropdown-menu-item) {
+        width: 160px;
+    }
 }
 .container{
     width:80%;
     margin:0 auto;
+}
+.ant-menu-horizontal.ant-menu-sub, 
+.ant-menu-vertical.ant-menu-sub,
+.ant-menu-vertical-left.ant-menu-sub,
+.ant-menu-vertical-right.ant-menu-sub {
+    min-width: 120px!important;
 }

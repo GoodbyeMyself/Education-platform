@@ -29,7 +29,7 @@ export default {
 		*getData({ payload }, { call, put, select }) {
 			const { data } = yield call(indexpageService.getData,payload);
             if (data.code == 200) {
-            	message.success('数据请求成功，请在控制台查看结果');
+            	// message.success('数据请求成功，请在控制台查看结果');
 				yield put({
 					type: 'updateState',
 					payload: {

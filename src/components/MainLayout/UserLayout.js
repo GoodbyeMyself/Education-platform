@@ -31,9 +31,9 @@ class UserLayout extends React.PureComponent {
     	const { pathname } = location;
     	let title = '在线教育平台';
     	// getRouteData('UserLayout').forEach((item) => {
-     //  		if (item.path === pathname) {
-     //    		title = `${item.name} - Ant Design Pro`;
-     //  		}
+     	//	  if (item.path === pathname) {
+     	//      title = `${item.name} - Ant Design Pro`;
+     	//   }
     	// });
     return title;
   }

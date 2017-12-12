@@ -65,7 +65,7 @@ function Login({dispatch, Login, location, form: { setFieldsValue, getFieldDecor
 		        }) 
 
 		        setTimeout(() => {
-  					if(values.userName == 'student'){
+  					if(values.userName == 'student' && values.password == '123456'){
   						message.success('登陆成功！',2, function(){
 							dispatch({
 					            type: 'Login/updateState',
@@ -76,15 +76,28 @@ function Login({dispatch, Login, location, form: { setFieldsValue, getFieldDecor
   							dispatch(routerRedux.push('/stuIndexPage'));
   						})
 		        	} 
-		        	else if(values.userName == 'teacher'){
-						dispatch({
-				            type: 'Login/updateState',
-				            payload: {
-				               submitting: false,
-				            }
-				        })   							
-						dispatch(routerRedux.push('/tchIndexPage'));		        		
+		        	else if(values.userName == 'teacher' && values.password == '123456'){
+						message.success('登陆成功！',2, function(){
+							dispatch({
+					            type: 'Login/updateState',
+					            payload: {
+					               submitting: false,
+					            }
+					        })   							
+							dispatch(routerRedux.push('/tchIndexPage'));	
+  						})		        		
 		        	}
+					else if(values.userName == 'admin' && values.password == '123456'){
+						message.success('登陆成功！',2, function(){
+							dispatch({
+					            type: 'Login/updateState',
+					            payload: {
+					               submitting: false,
+					            }
+					        })   							
+							dispatch(routerRedux.push('/adminIndexPage'));
+  						})							
+		        	}		        	
 		        	else{
 						dispatch({
 				            type: 'Login/updateState',

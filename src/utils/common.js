@@ -41,7 +41,6 @@ class AppContext {
         this.setItemInCookieHashed('userName', '');
         this.setItemInCookieHashed('userType', '');
         this.setItemInCookieHashed('userToken', '');
-        console.error('仅用于联调，生产/测试环境移除此调用');
     }
 
     /**

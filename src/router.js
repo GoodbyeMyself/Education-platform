@@ -18,7 +18,15 @@ function RouterConfig({ history, app }) {
       		import('./models/User/Register'),
     	],
     	component: () => import('./routes/User/Register'),
-  	});  	
+  	}); 
+
+	const adminIndexPage = dynamic({
+    	app,
+    	models: () => [
+      		import('./models/Admin/IndexPage'),
+    	],
+    	component: () => import('./routes/Admin/IndexPage'),
+  	});  	 	
 
 	const stuIndexPage = dynamic({
     	app,
@@ -41,6 +49,7 @@ function RouterConfig({ history, app }) {
       		<Switch>
         		<Route exact path="/" component={ Login } />
         		<Route exact path="/Register" component={ Register } />
+        		<Route exact path="/adminIndexPage" component={ adminIndexPage } />
         		<Route exact path="/stuIndexPage" component={ stuIndexPage } />
         		<Route exact path="/tchIndexPage" component={ tchIndexPage } />
       		</Switch>

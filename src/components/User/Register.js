@@ -208,7 +208,7 @@ function Register({dispatch, Register, location, form:{setFieldsValue, getFieldD
 	                		{getFieldDecorator('prefix', {
 	                  			initialValue: '86',
 	                		})(
-		                  		<Select size="large" style={{ marginTop: '4px' }}>
+		                  		<Select size="large">
 		                    		<Option value="86">+86</Option>
 		                    		<Option value="87">+87</Option>
 		                  		</Select>

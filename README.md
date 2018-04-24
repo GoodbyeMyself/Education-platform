@@ -20,26 +20,6 @@
 
 ---
 
-
-## 主要进度
-
-
-```gantt
-    title 项目开发流程
-    section 项目确定
-        需求分析       :a1, 2018-04-24, 20d
-        可行性报告     :after a1, 10d
-        概念验证       : 10d
-    section 项目实施
-        概要设计      :2018-06-05  , 10d
-        详细设计      :2018-06-18, 10d
-        编码          :2018-06-30, 50d
-        测试          :2018-08-22, 15d
-    section 发布验收
-        发布: 2d
-        验收: 3d
-```
-
 ## 技术栈
 >React.js + dva.js + react-router + Redux + Ant.Design + Ant.Design.pro + WebPack + Less + Es6 + eS-lint
 

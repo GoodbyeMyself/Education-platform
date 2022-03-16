@@ -3,16 +3,24 @@
 
 ## Introdução
 
-Por que uma plataforma educacional, em vez de qualquer outro projeto? A razão é muito simples. O desenvolvedor [GoodbyeMyself](https://github.com/GoodbyeMyself) construiu a base deste projeto até 2018 com tempo livre que tinha. E eu estava navegando pelo GitHub e me deparei com o projeto dele, rodei na minha máquina e era exatamente o que eu estava procurando.
+Por que uma plataforma educacional, em vez de qualquer outro projeto?
+A razão é muito simples.
+O desenvolvedor [GoodbyeMyself](https://github.com/GoodbyeMyself) construiu a base deste projeto até 2018 com tempo livre que tinha.
+E eu estava navegando pelo GitHub e me deparei com o projeto dele, rodei na minha máquina e era exatamente o que eu estava procurando.
+Então vamos lá!
 
-O dev conta no README original que costumava visitar várias plataformas de aprendizado online, e que, cada site tinha suas próprias características, mas também existiam algumas interações bem ruins. Espero desenvolver uma boa *plataforma de educação decentralizada* e que sirva de aprendizado para outros desenvolvedores.
+O dev conta no README original (escrito em chinês) que costumava visitar várias plataformas de aprendizado online, e que, cada site tinha suas próprias características, mas também existiam algumas interações bem ruins.
+Isso acontece comigo também pois plataformas como Coursera ou edX ainda são bem estranhas. Acho até engraçado o fato de ter tantos cursos bons das mais renomadas universidades ao redor do mundo, com professores muito inspiradores e... uma plataforma que poderia ser melhor hahaha~
 
-Este tipo de projeto é muito prático e funciona bem, mas também é bastante chato de desenvolver. Não fica paracendo tão bonito quanto um player de música.
-Depois de pensar nisso, descobri que é um bom material construir essa plataforma. Aqui começo com algumas camadas já prontas, mas mesmo assim tive que traduzir tudo o que estava em chinês para o português brasileiro/inglês.
+Espero desenvolver uma boa *Plataforma de Educação à Distância Decentralizada* e que sirva de aprendizado para outros desenvolvedores também.
+ 
+Este tipo de projeto é muito prático e funciona bem, mas também é bastante chato de desenvolver e não fica parace tão bonito quanto um player de música.
+Pensando nisso, vi que tenho um bom material construir para essa plataforma.
+Aqui começo com algumas camadas já prontas, mas mesmo assim tive que traduzir tudo o que estava em chinês para o português brasileiro/inglês e organizar as pastas e apagar alguns arquivos.
 
 >O projeto está estimado em torno de 50 páginas, envolvendo cadastro, login, gestão da organização, gestão de turmas, etc. É um processo completo.
 
-######Como sou um desenvolvedor autônomo, uso o tempo que consigo para fazer isso, então o ciclo pode ser um pouco longo. Não sei quanto tempo levará o projeto até a conclusão. Vou atualizando assim que possível. Continuarei a desenvolver algumas páginas, funcionalidades e vou adicionando comentários detalhados dentro da regra convencional para commits.
+###### Como sou um desenvolvedor autônomo, uso o tempo que consigo para fazer isso, então o ciclo pode ser um pouco longo. Não sei quanto tempo levará o projeto até a conclusão. Vou atualizando assim que possível. Continuarei a desenvolver algumas páginas, funcionalidades e vou adicionando comentários detalhados dentro da regra convencional para commits.
 
 Além disso, para desenvolver rapidamente este projeto, utilizo o [Ant-Design-Pro](https://pro.ant.design) que é uma biblioteca oriental MUITO PODEROSA dedicada ao desenvolvimento de soluções empresariais. Utilizo o Antd-pro pelo toque de profissionalismo que ele dá para a aplicação.
 

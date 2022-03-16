@@ -36,7 +36,7 @@ Nota: Devido a algumas propriedades do ES6, utilize uma versão Node.js 7+
 Clone o projeto na sua máquina:
 >git clone https://github.com/smzto/React-EAD-App
 Certifique-se de entrar na pasta do projeto
->cd react-ead-app
+>cd react-ead-dapp
 Instale as dependências
 >npm install
 Inicie o servidor de desenvolvimento

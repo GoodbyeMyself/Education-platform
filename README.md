@@ -1,50 +1,43 @@
-# 教育平台
+# Plataforma de Educação, Educação à Distância (EAD)
 
----
+## Introdução
 
-## 前言
+&emsp;&emsp;Por que uma plataforma educacional, em vez de qualquer outro projeto? A razão é muito simples. O desenvolvedor [GoodbyeMyself](https://github.com/GoodbyeMyself) contribuiu até 2018 com tempo livre que tinha e construiu a base deste projeto. Eu estava navegando pelo GitHub e me deparei com o projeto dele, rodei na minha máquina e era exatamente o que eu estava procurando.
 
-&emsp;&emsp;作为一个程序‘猿’，时曾在网上搜索各类的实战项目源码,大部分都是已经成型的企业的业务逻辑进行的二次分析，交互没有预期都是提前已经知晓的。但我们实际在工作中，经常会遇到随时更改的各类需求，所以对程序员逻辑严谨度要求高，处理特殊问题复杂，常常会让我们很头疼。既然这样，那不如自己来从源头分析一个产品。进行开发，希望站在研发的各个位置上，进行一次分析，对以后在项目中分析问题时，可以有一个更全面的眼光进行分析问题，我开源出来这次整体开发过程，希望对能看到的人会有帮助。
+O dev conta no repositório original que costumava visitar várias plataformas de aprendizado online, e que, cada site tinha suas próprias características, mas também existiam algumas interações ruins. Espero desenvolver uma boa plataforma de educação decentralizada e que sirva de aprendizado para outros desenvolvedores.
 
-&emsp;&emsp;为啥是教育平台，而不是仿照现成的东西？原因很简单，业余时间，经常逛各类在线学习平台，每个网站都有各自的特点，但是又都有一些不好的交互，自己希望开发一个好的教育平台，方便大家学习。
+&emsp;&emsp;Este tipo de projeto funcional é muito prático, mas muitas vezes bastante chato. E não fica paracendo tão bonito quanto um player de música.
+Depois de pensar nisso, descobri que é um bom material construir essa plataforma.
 
-&emsp;&emsp;这种功能性的项目很实用但是往往也很枯燥，没有音乐播放器那么看起来绚丽，思来想去发现饿了么是一个不错的素材，一来它足够复杂，开放的外卖平台比一般的公司独有商店更加复杂。二来 见到那么多美食，大家也不会感觉到厌烦
+&emsp;&emsp;Este projeto está estimado em torno de 50 páginas, envolvendo cadastro, login, gestão da organização, gestão de turmas, etc. É um processo completo.
 
-&emsp;&emsp;此项目估计不会少于50个页面，涉及注册、登陆、组织管理、班级管理等等，是一个完整的流程。一般公司即便是官网的单页面项目都没这么复杂，如果这个项目能驾驭的了，相信大部分公司的其他单页面应用也就不在话下，即便更复杂，也不会比这个高到哪里去。
+&emsp;&emsp;Como uso meu tempo livre para fazer isso, o ciclo deve ser um pouco longo. Não sei quanto tempo levará para o projeto começar do zero até a conclusão. Atualize-o lentamente. Continuaremos a desenvolver alguns páginas e adicionar comentários detalhados.
 
-&emsp;&emsp;因为利用业余时间来做，周期肯定有点长，项目从零布局开始到完成目前还不知道会多长时间，慢慢更新吧，会不断的进行一些页面的开发，增加详细的注释。
+&emsp;&emsp;Além disso, para desenvolver rapidamente, este projeto usa o Ant-Design-Pro que é uma biblioteca oriental dedicada ao desenvolvimento de soluções empresariais. Utilizo o Antd-pro pelo toque de profissionalismo que ele dá para a aplicação.
+###Nota: Este projeto é puramente pessoal, se houver alguma semelhança, é puramente acidental;
 
-&emsp;&emsp;另外，这个项目为了开发迅速，使用Antd-pro进行构建，未自己重新构建，因为自己比较喜欢这个样式风格，哈哈~ 。
+##Stack das tecnologias:
 
-### 注：此项目纯属个人瞎搞，如有雷同纯属意外；
-
----
-
-## 技术栈
 >React.js + dva.js + react-router + Redux + Ant.Design + Ant.Design.pro + WebPack + Less + Es6 + eS-lint
 
-## 项目运行
-注意：由于涉及 ES6/7 等新属性，nodejs 必须是 6.0 以上版本 ，node7是测试版，有可能会出问题，建议使用稳定版
+##Execução do projeto
+Nota: Devido a algumas propriedades do ES6, utilize uma versão Node.js 7+
 
->安装依赖
->&emsp;&emsp;npm install
->启动
->&emsp;&emsp;npm start
+Instalar dependências
+>npm install
+Iniciar servidor de desenvolvimento
+>npm start
 
-## 说明
+## Ilustrar
 
->本项目主要用于熟悉如何用 React + dva 架构一个大型项目
+>Este projeto é usado principalmente para se familiarizar como estruturar um grande projeto com React + dva
 
->如果对您有帮助，您可以点右上角 “Star” 支持一下 谢谢！ 
+>Se foi útil para você, você pode clicar em "Star" no canto superior direito para apoiá-lo. Obrigado!
 
->或者您可以 “follow” 一下，我会不断开源更多的有趣的项目
+>Ou você pode "seguir" meu perfil, continuarei a abrir mais projetos interessantes
 
->开发环境 windows  Chrome 55
+Ambiente e ferramentas de desenvolvimento:
+>Windows 10 + Firefox Dev Edition
+>VScode
 
->开发工具 Eclipse + vscode 
-
->如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
-
-
-
-
+>Se tiver alguma dúvida, por favor, publique em Issues, ou se você encontrar um problema e tiver uma solução muito boa, a Pull Request é bem-vinda 👍
